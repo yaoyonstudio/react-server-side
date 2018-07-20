@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>React Server Side Demo</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/flex.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <main class="flex-r flex-c-b main">
+        <h1 class="site-title">React Server Side demo</h1>
+        <nav class="site-menu">
+          <a class="site-menu-link" href="index.html">首页</a>
+          <a class="site-menu-link" href="about.html">关于我们</a>
+        </nav>
+      </main>
+    </header>
+    <div class="main">
+      <section class="post-section">
+        <header class="post-header">
+          <h3>最新资讯</h3>
+        </header>
+        <div id="post-container" class="post-container"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="js/constants.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
