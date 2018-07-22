@@ -1,6 +1,13 @@
 // 文章列表条目组件
+// featuredimgurl
 const PostItem = props => {
-  return e('li', { className: 'post-item' }, props.title)
+  return e('li', { className: 'flex-r flex-s-b post-item' }, [
+    e('img', { key: 'post-item-img', src: props.data.featuredimgurl }),
+    e('aside', { key: 'post-item-aside', className: 'flexItem' }, [
+      e('h4', { key: 'post-item-title' }, props.data.title),
+      e('div', { key: 'post-item-excerpt', className: 'post-item-excerpt', dangerouslySetInnerHTML: { __html: props.data.excerpt } })
+    ])
+  ])
 }
 
 // 文章列表组件
@@ -31,8 +38,30 @@ class PostList extends React.Component {
 
   render () {
     return e('ul', { className: 'post-list' }, [this.state.list.map((item, index) => {
-      return e(PostItem, { key: index, title: item.title })
+      return e(PostItem, { key: index, data: item })
     }), this.state.loading && e('img', { key: 'post-loading', className: 'post-loading', src: 'img/loading.svg' })])
   }
 }
+
+
+// 头部组件
+const SiteHeader = props => {
+  return  e('main', { className: 'flex-r flex-c-b main' }, [
+    e('h1', { key: 'site-title', className: 'site-title' }, props.title),
+    e('nav', { key: 'site-menu', className: 'site-menu'}, [props.menus.map((menu, index) => {
+      return e('a', { key: index, className: 'site-menu-link', href: menu.link }, menu.title)
+    })])
+  ])
+}
+
+
+// 底部组件
+const SiteFooter = props => {
+  return e('main', { className: 'main' },
+    e('p', { dangerouslySetInnerHTML: { __html: '&copy; 2018 版权所有' } })
+  )
+}
+
+
+
 
