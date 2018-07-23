@@ -9,12 +9,16 @@ ul, li {
 }
 
 .container {
-
+  width: 100%;
 }
 
 .main {
   width: 1200px;
   margin: 0 auto;
+}
+
+.main-full {
+  width: 100%;
 }
 
 .site-header {
@@ -55,8 +59,8 @@ ul, li {
 }
 .post-header {
   width: 100%;
-  height: 32px;
-  line-height: 32px;
+  height: 48px;
+  line-height: 48px;
   background-color: #74aadc;
   color: #fff;
   font-size: 14px;
@@ -86,14 +90,40 @@ ul, li {
   color: #999;
   margin: 12px 0;
 }
+.post-item .post-footer {
+  width: 100%;
+}
+.post-item .post-footer span {
+  color: #999;
+}
 .post-loading {
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 
-
-
+.about-header {
+  width: 100%;
+}
+.about-header img {
+  width: 100%;
+}
+.about-intro {
+  padding-bottom: 40px;
+}
+.about-intro-section {
+  margin-top: 40px;
+}
+.about-intro-section h3 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about-intro-section p {
+  color: #666;
+  font-size: 18px;
+}
 
 
 

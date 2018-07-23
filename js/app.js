@@ -11,8 +11,6 @@ $(document).ready(() => {
   ReactDOM.render(e(SiteHeader, { title: siteTitle, menus: siteMenus }), document.getElementById('site-header'))
 
   ReactDOM.render(e(SiteFooter, {}), document.getElementById('site-footer'))
-  
-  // 渲染文章列表
-  ReactDOM.render(e(PostList), document.getElementById('post-container'))
+
 })
 

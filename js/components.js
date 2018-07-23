@@ -1,11 +1,13 @@
 // 文章列表条目组件
-// featuredimgurl
 const PostItem = props => {
   return e('li', { className: 'flex-r flex-s-b post-item' }, [
-    e('img', { key: 'post-item-img', src: props.data.featuredimgurl }),
+    e('img', { key: 'post-item-img', src: props.data.thumbnailurl }),
     e('aside', { key: 'post-item-aside', className: 'flexItem' }, [
       e('h4', { key: 'post-item-title' }, props.data.title),
-      e('div', { key: 'post-item-excerpt', className: 'post-item-excerpt', dangerouslySetInnerHTML: { __html: props.data.excerpt } })
+      e('div', { key: 'post-item-excerpt', className: 'post-item-excerpt', dangerouslySetInnerHTML: { __html: props.data.excerpt } }),
+      e('footer', { key: 'post-footer', className: 'post-footer' }, [
+        e('span', { key: 'post-item-date'}, props.data.datestr)
+      ])
     ])
   ])
 }
